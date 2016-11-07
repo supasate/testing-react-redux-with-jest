@@ -1,4 +1,5 @@
-var path = require('path')
+const path = require('path')
+
 module.exports = {
   entry: path.resolve('src/index.js'),
   output: {
@@ -15,7 +16,7 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style!css',
-      }
+      },
     ],
-  }
+  },
 }
