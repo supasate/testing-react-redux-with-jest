@@ -1,22 +1,31 @@
 const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
-  entry: path.resolve('src/index.js'),
+  devtool: 'eval-source-map',
+  entry: [
+    'react-hot-loader/patch',
+    'webpack-hot-middleware/client',
+    path.resolve('src/index.js'),
+  ],
   output: {
     filename: 'bundle.js',
-    path: path.resolve('dist'),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/dist/',
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.js$/,
-        loader: 'babel',
+        test: /\.jsx?$/,
+        loader: 'babel-loader',
       },
       {
         test: /\.css$/,
-        loader: 'style!css',
+        loaders: ['style-loader', 'css-loader'],
       },
     ],
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+  ],
 }
