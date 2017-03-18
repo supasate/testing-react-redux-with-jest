@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
-import TodoItem from '../src/components/TodoItem'
+import TodoItem from '../TodoItem'
 
 storiesOf('TodoItem', module)
   .add('not complete', () => (
