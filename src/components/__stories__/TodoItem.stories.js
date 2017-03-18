@@ -5,9 +5,9 @@ import TodoItem from '../TodoItem'
 
 storiesOf('TodoItem', module)
   .addDecorator(withKnobs)
-  .add('not complete', () => (
+  .addWithInfo('not complete', 'Show a todo item when complete prop is blank or false', () => (
     <TodoItem text={text('Text', 'Not complete')} />
   ))
-  .add('complete', () => (
+  .addWithInfo('complete', 'Show a todo item when complete prop is provided or true', () => (
     <TodoItem text={text('Text', 'Complete')} complete={boolean('Complete', true)} />
   ))

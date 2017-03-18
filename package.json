@@ -12,6 +12,7 @@
   "author": "CodeSheep Team",
   "license": "ISC",
   "devDependencies": {
+    "@kadira/react-storybook-addon-info": "^3.3.0",
     "@kadira/storybook": "^2.21.0",
     "@kadira/storybook-addon-knobs": "^1.7.1",
     "babel-cli": "^6.23.0",
