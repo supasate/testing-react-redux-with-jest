@@ -13,6 +13,10 @@ module.exports = {
   module: {
     loaders: [
       // add your custom loaders.
+      {
+        test: /\.css$/,
+        loaders: ['style-loader', 'css-loader?modules'],
+      },
     ],
   },
 };
