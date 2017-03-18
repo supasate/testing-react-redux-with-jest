@@ -1,7 +1,8 @@
 import React from 'react'
+import TodoItem from './TodoItem'
 
 const App = () => (
-  <div>Hello React</div>
+  <TodoItem text="Hello React" complete />
 )
 
 export default App
