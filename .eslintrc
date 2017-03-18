@@ -8,9 +8,19 @@
   "plugins": [
     "import",
   ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+    },
+  },
   "rules": {
+    "semi": ["warn", "never"],
+    "class-methods-use-this": "off",
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
-    "react/require-extension": "off",
-    "semi": ["error", "never"],
+    "react/prefer-stateless-function": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "consistent-return": "off",
+    "no-console": "off"
   }
 }

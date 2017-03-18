@@ -21,7 +21,7 @@ app.get('*', (req, res) => {
 
 app.listen(8080, (err) => {
   if (err) {
-    return console.error(err) // eslint-disable-line no-console
+    return console.error(err)
   }
-  console.log('Listening at http://localhost:8080') // eslint-disable-line no-console
+  console.log('Listening at http://localhost:8080')
 })
