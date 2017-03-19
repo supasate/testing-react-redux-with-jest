@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewTodo matches its snapshot 1`] = `
+<div
+  className="new-todo"
+>
+  <input />
+  <button
+    className="btn btn-primary"
+  >
+    Add
+  </button>
+</div>
+`;
