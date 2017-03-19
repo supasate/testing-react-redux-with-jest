@@ -8,4 +8,10 @@ describe('TodoItem', () => {
 
     expect(component.is('li')).toBe(true)
   })
+
+  it('contains complete class if receiving complete prop', () => {
+    const component = shallow(<TodoItem text="Hello" complete />)
+
+    expect(component.hasClass('complete')).toBe(true)
+  })
 })
