@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoList matches its snapshot 1`] = `
+<ul
+  className="todo-list"
+>
+  <TodoItem
+    complete={false}
+    id={1}
+    text="Feed cat"
+  />
+  <TodoItem
+    complete={true}
+    id={2}
+    text="Drink coffee"
+  />
+</ul>
+`;

@@ -16,6 +16,10 @@ describe('TodoList', () => {
     component = shallow(<TodoList {...props} />)
   })
 
+  it('matches its snapshot', () => {
+    expect(component).toMatchSnapshot()
+  })
+
   it('renders correct structure', () => {
     expect(component.is('ul')).toBe(true)
     expect(component.hasClass('todo-list')).toBe(true)
