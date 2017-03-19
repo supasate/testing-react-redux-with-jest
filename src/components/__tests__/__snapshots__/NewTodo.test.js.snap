@@ -4,7 +4,10 @@ exports[`NewTodo matches its snapshot 1`] = `
 <div
   className="new-todo"
 >
-  <input />
+  <input
+    onChange={[Function]}
+    value=""
+  />
   <button
     className="btn btn-primary"
   >

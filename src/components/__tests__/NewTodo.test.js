@@ -22,4 +22,14 @@ describe('NewTodo', () => {
     expect(component.find('button').first().hasClass('btn'))
     expect(component.find('button').first().hasClass('btn-primary'))
   })
+
+  it('changes state when typing', () => {
+    component.find('input').simulate('change', {
+      target: {
+        value: 'Hello',
+      },
+    })
+
+    expect(component.state('text')).toBe('Hello')
+  })
 })
