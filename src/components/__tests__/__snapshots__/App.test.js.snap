@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App mathces its snapshot 1`] = `
+<div
+  className="todo-app"
+>
+  <Connect(NewTodo) />
+  <Connect(TodoList) />
+</div>
+`;
