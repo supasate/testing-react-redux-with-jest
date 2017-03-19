@@ -7,7 +7,9 @@
     "dev": "node server.js",
     "build": "webpack",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "author": "CodeSheep Team",
   "license": "ISC",
@@ -29,6 +31,7 @@
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.6.0",
     "express": "^4.14.1",
+    "jest": "^19.0.2",
     "path": "^0.12.7",
     "react-hot-loader": "^3.0.0-beta.6",
     "style-loader": "^0.13.2",
