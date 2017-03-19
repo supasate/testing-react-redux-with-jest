@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoItem matches its snapshot - complete 1`] = `
+<li
+  className="complete"
+>
+  Hello
+</li>
+`;
+
+exports[`TodoItem matches its snapshot - not complete 1`] = `
+<li
+  className=""
+>
+  Hello
+</li>
+`;
