@@ -1,12 +1,14 @@
 import { ADD_TODO } from '../actions/types'
 
 const initialState = []
-let nextId = 1
 
 const todosReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_TODO: {
-      nextId += 1
+      const nextId = 1 + state.reduce(
+        (max, cur) => Math.max(max, cur.id),
+        0
+      )
 
       return [...state, {
         id: nextId,
