@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { Provider } from 'react-redux'
-import App from './components/App'
+import Root from './components/Root'
 import { createStore } from './store'
 
 const store = createStore()
@@ -18,10 +18,10 @@ const render = (Component) => {
   )
 }
 
-render(App)
+render(Root)
 
 if (module.hot) {
-  module.hot.accept('./components/App', () => {
-    render(App)
+  module.hot.accept('./components/Root', () => {
+    render(Root)
   })
 }
