@@ -1,6 +1,6 @@
 import { createStore } from '../'
 import todosReducer from '../../reducers/todosReducer'
-import { ADD_TODO } from '../../actions/types'
+import { ADD_TODO_SUCCESS } from '../../actions/types'
 
 describe('store', () => {
   let store
@@ -27,8 +27,8 @@ describe('store', () => {
 
   it('child reducer handles and action', () => {
     const action = {
-      type: ADD_TODO,
-      payload: 'Hello',
+      type: ADD_TODO_SUCCESS,
+      payload: { id: 1, text: 'Hello', complete: false },
     }
     store.dispatch(action)
     expect(store.getState().todos).toEqual(todosReducer(undefined, action))
