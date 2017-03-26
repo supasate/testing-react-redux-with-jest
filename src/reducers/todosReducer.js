@@ -1,4 +1,4 @@
-import { ADD_TODO } from '../actions/types'
+import { ADD_TODO, FETCH_TODOS_SUCCESS } from '../actions/types'
 
 const initialState = []
 
@@ -15,6 +15,9 @@ const todosReducer = (state = initialState, action) => {
         text: action.payload.text,
         complete: false,
       }]
+    }
+    case FETCH_TODOS_SUCCESS: {
+      return action.payload.todos
     }
     default:
       return state
