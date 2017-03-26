@@ -1,10 +1,10 @@
-import { ADD_TODO, FETCH_TODOS_SUCCESS } from '../actions/types'
+import { ADD_TODO_SUCCESS, FETCH_TODOS_SUCCESS } from '../actions/types'
 
 const initialState = []
 
 const todosReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_TODO: {
+    case ADD_TODO_SUCCESS: {
       const nextId = 1 + state.reduce(
         (max, cur) => Math.max(max, cur.id),
         0

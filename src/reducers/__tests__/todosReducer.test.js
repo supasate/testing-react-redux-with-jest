@@ -1,5 +1,5 @@
 import todosReducer from '../todosReducer'
-import { ADD_TODO, FETCH_TODOS_SUCCESS } from '../../actions/types'
+import { ADD_TODO_SUCCESS, FETCH_TODOS_SUCCESS } from '../../actions/types'
 
 describe('todosReducer', () => {
   it('returns correct initial state', () => {
@@ -15,12 +15,12 @@ describe('todosReducer', () => {
     expect(nextState).toEqual(curState) // compare values
   })
 
-  it('adds todos when receiving ADD_TODO action', () => {
+  it('adds todos when receiving ADD_TODO_SUCCESS action', () => {
     const curState = [
       { id: 1, text: 'Feed cat', complete: false },
     ]
     const action = {
-      type: ADD_TODO,
+      type: ADD_TODO_SUCCESS,
       payload: { text: 'Sleep' },
     }
     const nextState = todosReducer(curState, action)
