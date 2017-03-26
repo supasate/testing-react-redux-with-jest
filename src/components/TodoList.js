@@ -10,7 +10,11 @@ const TodoList = props => (
 )
 
 TodoList.propTypes = {
-  todos: PropTypes.arrayOf(PropTypes.shape(TodoItem.propTypes)),
+  todos: PropTypes.arrayOf(PropTypes.shape(TodoItem.propTypes)).isRequired,
+}
+
+TodoList.defaultProps = {
+  todos: [],
 }
 
 export default TodoList
