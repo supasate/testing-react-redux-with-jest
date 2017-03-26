@@ -1,3 +1,4 @@
+import 'whatwg-fetch'
 import { ADD_TODO, FETCH_TODOS_SUCCESS } from './types'
 
 const addTodo = text => ({
@@ -7,12 +8,12 @@ const addTodo = text => ({
 
 const fetchTodosSuccess = todos => ({
   type: FETCH_TODOS_SUCCESS,
-  payload: todos,
+  payload: { todos },
 })
 
 const fetchTodos = () => (dispatch) => {
   const uri = 'http://localhost:3000/api/Todos'
-  return fetch(uri)
+  return fetch(uri, { mode: 'cors' })
   .then((response) => {
     if (!response.ok) throw Error(response.statusText)
     return response.json()
