@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import TodoList from '../TodoList'
 
 describe('TodoList', () => {
@@ -12,6 +12,7 @@ describe('TodoList', () => {
         { id: 1, text: 'Feed cat', complete: false },
         { id: 2, text: 'Drink coffee', complete: true },
       ],
+      fetchTodos: jest.fn(),
     }
     component = shallow(<TodoList {...props} />)
   })
@@ -28,5 +29,10 @@ describe('TodoList', () => {
   it('renders TodoItem from props', () => {
     expect(component.find('TodoItem').length)
       .toBe(props.todos.length)
+  })
+
+  it('calls props.fetchTodos when mounted', () => {
+    component = mount(<TodoList {...props} />)
+    expect(props.fetchTodos).toHaveBeenCalled()
   })
 })
