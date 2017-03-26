@@ -1,8 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import App from '../App'
-import NewTodo from '../../containers/NewTodo'
-import TodoList from '../../containers/TodoList'
 
 describe('App', () => {
   let component
@@ -16,7 +14,7 @@ describe('App', () => {
   })
 
   it('uses correct containers', () => {
-    expect(component.find(NewTodo).exists()).toBe(true)
-    expect(component.find(TodoList).exists()).toBe(true)
+    expect(component.find('Connect(NewTodo)').exists()).toBe(true)
+    expect(component.find('Connect(TodoList)').exists()).toBe(true)
   })
 })
