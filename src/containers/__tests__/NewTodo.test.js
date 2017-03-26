@@ -2,8 +2,7 @@ import React from 'react'
 import configureMockStore from 'redux-mock-store'
 import { Provider } from 'react-redux'
 import { mount } from 'enzyme'
-import NewTodoContainer from '../NewTodo'
-import NewTodoComponent from '../../components/NewTodo'
+import NewTodo from '../NewTodo'
 import { ADD_TODO } from '../../actions/types'
 
 describe('NewTodo Container', () => {
@@ -16,9 +15,9 @@ describe('NewTodo Container', () => {
     store = createStore(state)
     component = mount(
       <Provider store={store}>
-        <NewTodoContainer />
+        <NewTodo />
       </Provider>
-    ).find(NewTodoContainer).find(NewTodoComponent)
+    ).find('NewTodo')
   })
 
   it('dispatches ADD_TODO action via props.addTodo', () => {
