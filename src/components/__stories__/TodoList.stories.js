@@ -1,5 +1,5 @@
 import React from 'react'
-import { storiesOf } from '@kadira/storybook'
+import { storiesOf, action } from '@kadira/storybook'
 import TodoList from '../TodoList'
 
 storiesOf('TodoList', module)
@@ -8,8 +8,8 @@ storiesOf('TodoList', module)
       { id: 1, text: 'Drink coffee', complete: false },
       { id: 2, text: 'Feed cat', complete: true },
     ]
-    return <TodoList todos={todos} />
+    return <TodoList todos={todos} fetchTodos={action('fetch todos')} />
   })
   .addWithInfo('empty', 'Show empty todo list', () => (
-    <TodoList />
+    <TodoList fetchTodos={action('fetch todos')} />
   ))
